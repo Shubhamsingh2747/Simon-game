@@ -8,15 +8,6 @@ var started = false;
 var level = 0;
 
 
-/* if the game has not been started yet, it will wait for keypress and inside
-the keypress fn, "nextSequence()" will be called. A random color will be
-chosen and entered in array.
-Now, it will wait for the user to click and once a button is clickecd,
-".click()" event is triggered. It will push the user'c color in another Array
-and pass the length to "checkAnswer()" function.
-It will check if elements of both the array are same. If so then "nextSequence()"
-is alled again otherwise gameover class is added ans "startover()" fn called.*/
-
 $(document).keypress(function() {
   if (!started) {
     $("#level-title").text("Level " + level);
